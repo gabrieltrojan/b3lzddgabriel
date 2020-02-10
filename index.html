@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="images/logos-n-icons/favs/favico.ico">
+	<title>La Zone du Dehors</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+			$( "#dialog, #dialog2, #dialog3" ).dialog({
+				autoOpen: false,
+				maxWidth:600,
+				maxHeight: 230,
+				width: 600,
+				height: 230,
+				show: {
+					effect: "fade",
+					duration: 1000
+				},
+				hide: {
+					effect: "fade",
+					duration: 1000
+				}
+			});
+
+			$( "#opener" ).on( "click", function() {
+				$( "#dialog" ).dialog( "open" );
+				$( "#dialog2" ).dialog( "close" );
+				$( "#dialog3" ).dialog( "close" );
+			});
+			$( "#opener2" ).on( "click", function() {
+				$( "#dialog2" ).dialog( "open" );
+				$( "#dialog" ).dialog( "close" );
+				$( "#dialog3" ).dialog( "close" );
+			});
+			$( "#opener3" ).on( "click", function() {
+				$( "#dialog3" ).dialog( "open" );
+				$( "#dialog" ).dialog( "close" );
+				$( "#dialog2" ).dialog( "close" );
+			});
+
+			$( "#dialog, #dialog2, #dialog3" ).css({
+				"color": "white",
+				"background-color": "#000022"
+			});
+		} );
+	</script>
+</head>
+<body class="home">
+	<header>
+		<div class="site-id">
+			<a href="index.html" style="max-height:124px">
+				<img class="logo" src="images/logos-n-icons/logo-w.png" alt="LZDD" onmouseover="this.src='images/logos-n-icons/logo-hover.png';" onmouseout="this.src='images/logos-n-icons/logo-w.png';"></a>
+			<a href="">
+				<img class="icon" src="images/compte.png" alt="compte" onmouseover="this.src='images/compte-hover.png';" onmouseout="this.src='images/compte.png';" title="Connexion"></a>
+			<a href="">
+				<img class="icon" src="images/panier.png" alt="compte" onmouseover="this.src='images/panier-hover.png';" onmouseout="this.src='images/panier.png';" title="Panier"></a>
+			</div>
+			<a href="#main-menu" class="menu-toggle">
+				<div class="burger-breads">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+			<nav id="main-menu" class="main-menu">
+				<a href="#main-menu-toggle" class="menu-close">
+					<div class="burger-breads close">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</a>
+				<ul>
+					<li><a href="index.html">News</a></li>
+					<li><a href="index.html">Livres & Jeux</a></li>
+					<li><a href="index.html">Carte du café</a></li>
+					<li><a href="index.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="slider-wrapper">
+			<div class="inner-wrapper">
+				<input checked type="radio" name="slide" class="control" id="Slide1" />
+				<label for="Slide1" id="s1"></label>
+				<input type="radio" name="slide" class="control" id="Slide2" />
+				<label for="Slide2" id="s2"></label>
+				<input type="radio" name="slide" class="control" id="Slide3" />
+				<label for="Slide3" id="s3"></label>
+				<input type="radio" name="slide" class="control" id="Slide4" />
+				<label for="Slide4" id="s4"></label>
+				<div class="overflow-wrapper">
+					<div class="introduction">
+						<h2>BIENVENUE</h2>
+						<p>La Zone du Dehors séduit par sa triple fonction : librairie, café et ludothèque. Côté livres, vous serez accueilli par deux passionnés. Brice vous conseille en jeunesse, art et cinéma, Léo en littérature, sciences humaines, science-fiction, fantasy et bande dessinée. Côté café, posez-vous en terrasse ou au fond sous la verrière où de bonnes gourmandises sont proposées pour accompagner thé, café et chocolat chaud. Un espace de jeux est également mis à disposition pour passer un moment ludique et drôle entre amis ou en famille. En bref, un endroit comme on les aime, aussi bien qu'à la maison ! Découvrez les dernières news en défilant à droite !</p>
+						<a href="https://urlz.fr/bMZ3" style="color:white;" title="Itinéraire"><h4>68 cours Victor Hugo 33000 Bordeaux</h4></a>
+						<h4>Du mardi au samedi : 10h30-19h30</br>Dimanche : 13h-19h30</h4>
+					</div>
+					<div class="fleche" style="left : 22%;">
+						<input type="checkbox" id="Slide2" style="display: none;">
+						<label for="Slide2" style="cursor: pointer;">►</label>
+					</div>
+					<label for="Slide2" id="s2"></label>
+					<a class="slide"><img src="css/images/introduction.jpg" /></a>
+					<div class="news" style="left : 37.5%;">
+						<h2>DES POCHETTES LIVRES SURPRISES</h2>
+					</div>
+					<div class="fleche" style="left : 28%;">
+						<input type="checkbox" id="Slide1" style="display: none;">
+						<label for="Slide1" style="cursor: pointer;">◄</label>
+					</div>
+					<div class="fleche" style="left : 47%;">
+						<input type="checkbox" id="Slide3" style="display: none;">
+						<label for="Slide3" style="cursor: pointer;">►</label>
+					</div>
+					<a class="slide" href=""><img src="css/images/news1.jpg" /></a>
+					<div class="news" style="left : 62.5%;">
+						<h2>CLARISSE GOROKHOFF RENCONTRE DÉDICACE</h2>
+					</div>
+					<div class="fleche" style="left : 53%;">
+						<input type="checkbox" id="Slide2" style="display: none;">
+						<label for="Slide2" style="cursor: pointer;">◄</label>
+					</div>
+					<div class="fleche" style="left : 72%;">
+						<input type="checkbox" id="Slide4" style="display: none;">
+						<label for="Slide4" style="cursor: pointer;">►</label>
+					</div>
+					<a class="slide" href=""><img src="css/images/news2.jpg" /></a>
+					<div class="news" style="left : 87.5%;">
+						<h2>NOUS SOMMES PRÊTS À VOUS ACCUEILLIR</h2>
+					</div>
+					<div class="fleche" style="left : 78%;">
+						<input type="checkbox" id="Slide3" style="display: none;">
+						<label for="Slide3" style="cursor: pointer;">◄</label>
+					</div>
+					<a class="slide" href=""><img src="css/images/news3.jpg" /></a>
+				</div>
+			</div>
+		</div>
+
+		<section class="main-content">
+			<p style="font-weight : 700;">Mais quel est ce nom ?</p>
+
+			<p>Pour certains adorateurs de littérature de Science-fiction, la question ne se pose pas : "La Zone du Dehors" c'est le roman d'Alain Damasio, l'auteur de science-fiction français le plus reconnu pour son écriture aujourd'hui.</p>
+
+			<p>Certes, certes, la référence est bien là, mais elle ne saurait se contenter d'un simple hommage à un auteur qui le mérite amplement. Ce nom, ce titre que nous afficherons partout où l'on voudra nous empêcher de passer, c'est aussi notre volonté de faire sortir la littérature de ses intérieurs trop confortables. Plus que la littérature, c'est la culture entière à laquelle nous voulons retirer le socle de marbre sur lequel on veut parfois la clouer.</p>
+
+			<p style="font-weight : 700;">Sortir, ouvrir, explorer l'en dehors.</p>
+
+			<p>L'art pictural s'est transformé de nos jours en art de rue. Les artistes ont compris et viennent nous piquer le regard, l'ouïe, les sens, directement dans la rue ; ces lieux qui ne sont plus que passage, ces lieux qui n'ont de vie que le transit.</p>
+
+			<p style="font-weight : 700;">La vie n'est pas en intérieur.</p>
+
+			<p>Notre librairie veut vous offrir des portes ouvertes, sur la culture d'une génération qui veut toujours et encore décloisonner. D'un local qui avait été séparé en de nombreuses salles noires et phonétiquement neutres (le local accueillait une école de musique), nous avons démoli, recréé un espace traversé par la même lumière.</p>
+
+			<p>Nous vous parlerons de sujets dont vous ne savez rien, d'autres que vous auriez voulu mieux connaître. Nous vous parlerons de littérature, de cinéma, de peinture, d'installations in-situ et de performances. Nous vous parlerons de mondes qui n'existent pas et de mondes virtuels. Nous vous dirons que les jeux vidéo ont créé l'imaginaire d'une génération toute entière. Nous vous parlerons sans être campés en nous-même pour vous pousser à sortir, à découvrir ce qui se passe à l'extérieur, dans la zone du dehors.</p>
+
+			<p style="font-weight : 700;">"Soyez toujours pour vous-même votre dehors, le dehors de toute chose." (A.Damasio)</p>
+
+
+		</section>
+
+		<h1>NOS ESPACES</h1>
+
+		<section class="teaser-list">
+			<div class="product-list-item">
+				<figure>
+					<h3>LIBRAIRIE</h3>
+					<img src="images/th/livres.jpg" alt="">
+					<p>L’espace librairie est organisé par deux libraires : Brice et Léo. Chacun sa spécialité. Brice à la Jeunesse, à l’Art et au Cinéma, Léo à la Littérature, les Sciences Humaines, la Science fiction, la Fantasy et la BD. Du coup, nos sélections sont pour le moins assez éclectiques (parce qu’en plus on a pas les même goûts). Là encore, on essaie de casser des barrières: sur nos tables vous pourrez voir se côtoyer la littérature classique avec la science fiction, les essais avec la jeunesse (avec des couvertures choisies exprès pour brouiller les pistes). On a nos marottes, et on a envie d’en parler avec vous. On a nos névroses, et on a besoin d’en parler à quelqu’un. Si toi aussi Zoneur, tu veux parler de littérature, d’art, de tes performances au limbo ou au macramé, viens !</p>
+					<a href="" class="more-link">Voir les livres</a>
+				</figure>
+			</div>
+
+			<div class="product-list-item">
+				<figure>
+					<h3>CAFÉ</h3>
+					<img src="images/th/cafe.jpg" alt="">
+					<p>Place à Morgan, notre maître cookie, qui vous accueil et vous restaure. Il vous propose muffins, gâteaux et biscuits en tous genres à déguster avec un café, un thé, un chocolat chaud ou autres boissons fraîches. C’est tout bon, c’est tout bio, c’est tout de saison, c’est tout pas cher.</p> <p>L’idée ici est de créer un espace pour lire ce qu’il y a dans les rayons, pour bosser votre mémoire en retard, pour discuter des heures de tout et de tout, et encore de tout. Terrasse à l’extérieur, verrière à l’intérieur, coin canapé, jeux à disposition. On a fait les choses bien !</p>
+					<a href="" class="more-link">Voir la carte</a>
+				</figure>
+			</div>
+
+			<div class="product-list-item">
+				<figure>
+					<h3>LUDOTHÈQUE</h3>
+					<img src="images/th/jeux.jpg" alt="">
+					<p>A la zone on adore jouer, c’est pour ça qu’on propose aussi des jeux et du jeu de rôle. Comme pour le livre, on aura notre sélection en rayon, nos coups de cœur, les jeux qui nous ont permis de passer les meilleurs moment.</p> <p>Et puis des jeux narratifs et facile d’accès, car rien de mieux dans une librairie que de raconter des histoires, n’est-ce pas ?</p>
+
+					<p>Venez essayer !</p>
+					<a href="" class="more-link">Voir les jeux</a>
+				</figure>
+			</div>
+
+		</section>
+
+		<div id="dialog" title="LÉO">
+			<img src="images/leo.jpg" alt="leo" style="float:left; margin-right:1em">
+			<p>Léo c’est moi, je suis le boulet du groupe. Je m’occupe de la compta (oh chouette de la compta), je perds à moitié la boule et la mémoire qui va avec, j’ai plein d’idées de partout qui sont souvent pas réalisables, et les autres me supportent. Je m’occupe des rayons Littérature (classique, SF et Fantasy) et des Sciences Humaines. Attention, je suis aussi l’ami de tout le monde et peux devenir collant. Certains disent que j’aime me mettre tout nu. C’est faux.</p>
+		</div>
+
+		<div id="dialog2" title="BRICE">
+			<img src="images/brice.jpg" alt="brice" style="float:left; margin-right:1em">
+			<p>C’est le libraire qui a le plus d’expérience dans l’équipe, du coup il s’est ramassé tout ce qui a trait à l’organisation (ô joie !). Au moindre problème, on appelle Brice qui, sans souffler, vient à notre secours. A la Zone, on aime la pop culture et les supers héros, mais le nôtre, c’est Brice. Nous autres ne sommes que les demoiselles en détresse à venir sauver. Brice s’occupe en particulier des rayons Jeunesse et Cinéma.</p>
+		</div>
+
+		<div id="dialog3" title="MORGAN">
+			<img src="images/morgan.jpg" alt="morgan" style="float:left; margin-right:1em">
+			<p>Cuisinier de talent, au flegme anglais et à la démarche bonhomme. Méfiez-vous toutefois, car humour ravageur et intelligence tenace demeurent en revers de cape. Coté café, il a le rôle du discret, du bosseur, et du nounours.</p>
+		</div>
+
+		<footer>
+			<div class="equipe">
+				<div class="membre" id="opener"><img src="images/leo.jpg" title="Léo"></div>
+				<div class="membre" id="opener2"><img src="images/brice.jpg" title="Brice"></div>
+				<div class="membre" id="opener3"><img src="images/morgan.jpg" title="Morgan"></div>
+			</div>
+			<div class="informations">
+				<h2>INFORMATIONS</h2>
+				<nav>
+					<ul>
+						<li><a href="">Mentions légales</a></li>
+						<li><a href="">Conditions d'utilisation</a></li>
+						<li><a href="">Contactez-nous</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="newsletter">
+				<h2>NEWSLETTER</h2>
+				<p>Recevez en avant première</br>les dernières nouveautés !</p>
+				<input type="text" id="email" name="email" size="19px" placeholder="Saisissez votre e-mail">
+				<input type="submit" value="OK">
+			</div>
+			<div class="reseaux">
+				<h2>RÉSEAUX</h2>
+				<a href="https://www.facebook.com/lazonedudehors" title="Facebook" style="text-decoration: none;">
+					<img style="width:50px; height:50px;" src="images/fb.png" alt="Facebook" 
+					onmouseover="this.src='images/fbhover.png';" onmouseout="this.src='images/fb.png';">
+				</a>
+				<a href="https://www.instagram.com/lazonedudehors/" title="Instagram" style="text-decoration: none;">
+					<img style="width:50px; height:50px;" src="images/insta.png" alt="Instagram" 
+					onmouseover="this.src='images/instahover.png';" onmouseout="this.src='images/insta.png';">
+				</a>
+				<a href="https://twitter.com/lazonedudehors" title="Twitter" style="text-decoration: none;">
+					<img style="width:50px; height:50px;" src="images/twitter.png" alt="Twitter" 
+					onmouseover="this.src='images/twitterhover.png';" onmouseout="this.src='images/twitter.png';">
+				</a>
+			</div>
+		</footer>
+	</body>
+	</html>
